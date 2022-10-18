@@ -1,0 +1,34 @@
+ class Lasagna {
+ psvm
+
+     public static int expectedMinutesInOven() {
+         Lasagna lasagna = new Lasagna();
+         lasagna.expectedMinutesInOven();
+         if(expectedMinutesInOven>=40)
+         {sout
+
+     }
+
+
+     public static int remainingMinutesInOven(int minuteInCuptor) {
+         Lasagna lasagna = new Lasagna();
+         lasagna.remainingMinutesInOven(30);
+     }
+
+
+     public static int preparationTimeInMinutes(int layers) {
+         Lasagna lasagna = new Lasagna();
+         lasagna.preparationTimeInMinutes(2);
+     }
+
+
+     public static int totalTimeInMinutes(int minute, int layers) {
+         Lasagna lasagna = new Lasagna();
+         lasagna.totalTimeInMinutes(3, 20);
+     }
+ }
+ }
+
+
+
+
