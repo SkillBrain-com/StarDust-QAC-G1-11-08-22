@@ -34,6 +34,8 @@ public class MainSelenium_1 {
         driver.findElement(By.id("firstName")).sendKeys("Cristian");
         Thread.sleep(2500);
         driver.findElement(By.id("lastName")).sendKeys("Emil");
+//  cu linia de comanda de mai sus se impiedica dupa "lastName:
+//  cu linia de comanda de mai jos se impoidica inainte de "lastName"
 //        driver.findElement(By.xpath("//input[@id='Last Name']")).sendKeys("Emil");
         driver.findElement(By.id("userEmaile")).sendKeys("CristianEmil@hotmail.com");
         Thread.sleep(2500);
