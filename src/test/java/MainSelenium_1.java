@@ -15,7 +15,7 @@ public class MainSelenium_1 {
         driver.manage().window().maximize();
 //  folosim pagina de demo a TOOLS QA
         driver.get("https://demoqa.com");
-//  Inseram untemporizator in milisecunde - acum avem 2,5 secunde
+//  Inseram un temporizator in milisecunde - acum avem 2 secunde
         Thread.sleep(2000);
 
         WebElement footerElement = driver.findElement(By.tagName("footer")); //

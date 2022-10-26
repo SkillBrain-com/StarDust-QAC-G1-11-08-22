@@ -14,7 +14,7 @@ public class Tabel_HTML {
 
         System.out.println("Verificam tabelul ca sa vedem daca ruleaza corect!");
 
-    Thread.sleep(20000);
+    Thread.sleep(10000);
     driver.quit();
     }
 
