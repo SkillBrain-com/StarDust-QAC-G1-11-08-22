@@ -50,10 +50,10 @@ public class Selenium_T2 {
 
         System.out.println("Pagina a fost incarcata si descarcat cu succes!");
 
-/*
-        pentru linia 20 si 37 am folosit XPATH dar se poate utiliza si css.Selector - formulele de mai jos:
-P20-     WebElement title = driver.findElement(By.cssSelector("div[class='page-body'] h1"));
-P37-     WebElement paragraph_3 = driver.findElement(By.cssSelector("#domattributes"));
+/*      ATENTIE:
+        pentru linia 20 si 37 am folosit XPATH dar se poate utiliza si css.Selector cu formulele de mai jos:
+P20-    WebElement title = driver.findElement(By.cssSelector("div[class='page-body'] h1"));
+P37-    WebElement paragraph_3 = driver.findElement(By.cssSelector("#domattributes"));
 
  */
 
