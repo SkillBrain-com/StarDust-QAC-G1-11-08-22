@@ -11,16 +11,13 @@ public class Tabel_HTML {
         ChromeDriver driver = createDriverAndGetPage();
         testDynamicWebTable(driver);
         testWebTable(driver);
-
         System.out.println("Verificam tabelul ca sa vedem daca ruleaza corect!");
-
-    Thread.sleep(10000);
-    driver.quit();
     }
 
     public static ChromeDriver createDriverAndGetPage() {
         ChromeDriver driver = WebDriverManager.createChromeDriver();
         driver.get("http://testpages.herokuapp.com/styled/tag/dynamic-table.html");
+        driver.manage().window().maximize();
         return driver;
     }
 
@@ -33,9 +30,9 @@ public class Tabel_HTML {
     }
 
     private static void testDynamicWebTable(ChromeDriver driver) throws InterruptedException {
-          updateTable(driver);
-    }
+        updateTable(driver);
 
+    }
     public static void getTableDetails(ChromeDriver driver) throws InterruptedException {
         Thread.sleep(2000);
         WebElement tableCaption = driver.findElement(By.cssSelector("#tablehere table caption"));
@@ -98,8 +95,13 @@ public class Tabel_HTML {
 // se apasa butonul de refresh
         WebElement refreshTableButton = driver.findElement(By.id("refreshtable"));
         refreshTableButton.click();
-        Thread.sleep(2000);
+        System.out.println(" ");
 
+        Thread.sleep(5000);
+        System.out.println("Daca programul ruleaza si pagina se inchide la final, inseamna ca totul este OK! \n");
+
+//        driver.close();
+        driver.quit();
 
 //        WebElement tableCaption = driver.findElement(By.cssSelector("#tablehere table caption"));
 //        System.out.println(tableCaption.getText());
@@ -107,11 +109,6 @@ public class Tabel_HTML {
 //
 //        WebElement table = driver.findElement(By.cssSelector("#tablehere table"));
 //        System.out.println(tableCaption.getAttribute("id"));
-
-
-
-
-
     }
 
 }
