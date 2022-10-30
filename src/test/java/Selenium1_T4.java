@@ -3,8 +3,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 
-
-public class Selenium_T4 {
+public class Selenium1_T4 {
 
 //  PAGINA 4 din https://testpages.herokuapp.com/styled/ = HTML TABLE Tag
 
@@ -59,8 +58,10 @@ public class Selenium_T4 {
             System.out.println("Varsta - R_5, C_2: " + fifthRowColumns.get(1).getText());
 
             Thread.sleep(9000);
-            driver.close();
+//            driver.close();
             driver.quit();
+
+            System.out.println("Programul a rulat cu succes!");
         }
 }
 

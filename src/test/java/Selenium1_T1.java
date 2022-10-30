@@ -4,7 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 //  PAGINA 1 din tema https://testpages.herokuapp.com/styled/ = Basic Web Page Example
 
-public class Selenium_T1 {
+public class Selenium1_T1 {
 
         public static void main(String[] args) throws InterruptedException {
             System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
@@ -36,8 +36,11 @@ public class Selenium_T1 {
             Thread.sleep(3000);
             System.out.println("");
 
-            driver.close();
+//            driver.close();
             driver.quit();
+
+            System.out.println("Programul a rulat cu succes!");
+
 
 //            if ( i == 0)
 //            secondParagraph.getText() =0 -----------------------------------

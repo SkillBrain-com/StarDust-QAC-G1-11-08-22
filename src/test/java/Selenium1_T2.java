@@ -2,7 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Selenium_T2 {
+public class Selenium1_T2 {
 
 //  PAGINA 2 din https://testpages.herokuapp.com/styled/ = Element Attributes Examples
 
@@ -45,7 +45,7 @@ public class Selenium_T2 {
         driver.findElement(By.cssSelector(".styled-click-button")).click();
 
         Thread.sleep(5000);
-        driver.close();
+//        driver.close();
         driver.quit();
 
         System.out.println("Pagina a fost incarcata si descarcat cu succes!");
@@ -54,7 +54,6 @@ public class Selenium_T2 {
         pentru linia 20 si 37 am folosit XPATH dar se poate utiliza si css.Selector cu formulele de mai jos:
 P20-    WebElement title = driver.findElement(By.cssSelector("div[class='page-body'] h1"));
 P37-    WebElement paragraph_3 = driver.findElement(By.cssSelector("#domattributes"));
-
  */
 
     }

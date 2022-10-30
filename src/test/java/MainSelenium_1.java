@@ -48,9 +48,9 @@ public class MainSelenium_1 {
         driver.findElement(By.id("submit")).click();
         Thread.sleep(15000);
 
-        driver.close();
+//        driver.close();
         driver.quit();
-
+        System.out.println("Am finalizat rularea programului cu succes!");
     }
 
 }
