@@ -1,3 +1,5 @@
+package Selenium2;
+
 import org.openqa.selenium.WebDriver;
 import java.io.BufferedReader;
 import java.io.FileReader;

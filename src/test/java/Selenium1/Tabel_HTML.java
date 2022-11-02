@@ -1,8 +1,9 @@
+package Selenium1;
+
 import driver.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-//  import java.sql.SQLOutput;
 import java.util.List;
 
 public class Tabel_HTML {
@@ -88,8 +89,8 @@ public class Tabel_HTML {
 
         WebElement jsonData= driver.findElement(By.cssSelector("textarea#jsondata"));
         jsonData.clear();
-        jsonData.sendKeys("[{\"name\": \"Bob\", \"age\": 20}, {\"name\": \"George\", \"age\": 42}, {\"name\": \"Ioana\", \"age\": 32}, {\"name\": \"Ileana\", \"age\": 28}, \n" +
-                " {\"name\": \"Ion\", \"age\": 43}, {\"name\": \"Georgiana\", \"age\": 40}]");
+        jsonData.sendKeys("[{\"name\": \"Bob\", \"age\": 20}, {\"name\": \"Georgiana\", \"age\": 42}, {\"name\": \"Ionica\", \"age\": 32}, {\"name\": \"Ileana\", \"age\": 28}, \n" +
+                " {\"name\": \"Vasile\", \"age\": 43}, {\"name\": \"Gergica\", \"age\": 40}]");
         System.out.println(jsonData.getAttribute("value"));
 
 // se apasa butonul de refresh
@@ -98,7 +99,7 @@ public class Tabel_HTML {
         System.out.println(" ");
 
         Thread.sleep(5000);
-        System.out.println("Daca programul ruleaza si pagina se inchide la final, inseamna ca totul este OK! \n");
+        System.out.println("Daca programul ruleaza, valorile se afiseaza si pagina se inchide la final atunci totul este OK! \n");
 
 //        driver.close();
         driver.quit();

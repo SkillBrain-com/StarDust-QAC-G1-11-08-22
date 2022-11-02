@@ -1,3 +1,5 @@
+package Selenium1;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -46,7 +48,7 @@ public class MainSelenium_1 {
         driver.findElement(By.xpath("//input[@id='department']")).sendKeys("Engineering");
         Thread.sleep(1500);
         driver.findElement(By.id("submit")).click();
-        Thread.sleep(15000);
+        Thread.sleep(9000);
 
 //        driver.close();
         driver.quit();

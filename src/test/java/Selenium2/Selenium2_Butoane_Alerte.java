@@ -1,3 +1,5 @@
+package Selenium2;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

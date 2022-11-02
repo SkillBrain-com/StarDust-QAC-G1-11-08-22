@@ -1,9 +1,21 @@
+package Selenium2;
+
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.*;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import java.io.File;
 import java.io.IOException;
 
-public class Selenium2_Screen_Shot {
+public class Utilitati {
+    public static ChromeDriver getChromeDriver(){
+        System.setProperty("webdriver.chrome.driver" , "drivers/chromedriver.exe" );
+//  creez un obiect de tipul ChromeDriver
+        ChromeDriver driver = new ChromeDriver();
+        return new ChromeDriver();
+    }
 
     public static void takeScrennshot (String testcaseName, WebDriver driver) {
         String destination = null;
@@ -16,5 +28,7 @@ public class Selenium2_Screen_Shot {
             e.printStackTrace();
             System.out.println("Screenshot taken");
         }
-        }
+    }
+
+
 }

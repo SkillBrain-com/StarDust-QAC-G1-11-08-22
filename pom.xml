@@ -7,13 +7,14 @@
     <groupId>org.example</groupId>
     <artifactId>ProjSelenium</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+<!--Aici avem partea de SDK versiunea 18 -->
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+<!--Aici avem partea de SELENIUM -->
     <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -35,6 +36,15 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.5</version>
+        </dependency>
+
+<!--Aici avem partea de TEST-NG-->
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.6.1</version>
+            <scope>test</scope>
         </dependency>
 
 

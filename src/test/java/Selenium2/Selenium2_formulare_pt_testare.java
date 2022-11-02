@@ -1,3 +1,5 @@
+package Selenium2;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -54,7 +56,7 @@ public class Selenium2_formulare_pt_testare {
             submitlButton.click();
             Thread.sleep(5000);
 
-        } catch (Exception | Error e) {
+        } catch (Exception e) {
             e.printStackTrace();
             if (driver != null) {
                 File file = driver.getScreenshotAs(OutputType.FILE);

@@ -1,6 +1,10 @@
+package Selenium2;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -10,7 +14,7 @@ public class Selenium2_Erori_Demo_Curs {
 
         WebDriver driver = Utilitati.getChromeDriver();
 //        checkedException();
-        uncheckedException();
+//       uncheckedException();
 
         driver.quit();
     }
@@ -37,5 +41,17 @@ public class Selenium2_Erori_Demo_Curs {
 
     }
 
+    public static void takeScrennshot (String testcaseName, WebDriver driver) {
+        String destination = null;
+        try {
+            TakesScreenshot screenshot = (TakesScreenshot) driver;
+            File source = screenshot.getScreenshotAs(OutputType.FILE);
+            destination = System.getProperty("user.dir") + "/Logs/" + testcaseName + " .png";
+            FileUtils.copyFile(source, new File(destination));
+        } catch(IOException e) {
+            e.printStackTrace();
+            System.out.println("Screenshot taken");
+        }
+    }
 
 }
