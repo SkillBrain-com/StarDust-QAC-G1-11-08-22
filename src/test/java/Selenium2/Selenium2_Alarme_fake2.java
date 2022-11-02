@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Selenium2_Alarme_fake2 {
 
     public static void main(String[] args) throws InterruptedException {
-//        prima_alerta();
+        prima_alerta();
         a_doua_alerta();
     }
 
@@ -49,8 +49,10 @@ public class Selenium2_Alarme_fake2 {
             WebElement secondButton = driver.findElement(By.id("modaldialog"));
             secondButton.click();
             Thread.sleep(1000);
-            WebElement button2_OK = driver.findElement(By.xpath("//div[@class='dialog-actions']"));
-            System.out.println(driver.findElement(By.xpath("//div[@class='dialog-actions']")).getText());
+//            WebElement button2_OK = driver.findElement(By.xpath("//div[@class='dialog-actions']"));
+            WebElement button2_OK = driver.findElement(By.xpath("//div[@class='dialog active']"));
+//            System.out.println(driver.findElement(By.xpath("//div[@class='dialog-actions']")).getText());
+            System.out.println(driver.findElement(By.xpath("//div[@class='dialog active'] [h2]")).getText());
             Thread.sleep(1000);
             button2_OK.click();
             Thread.sleep(1000);
