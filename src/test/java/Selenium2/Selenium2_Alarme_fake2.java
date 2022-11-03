@@ -28,7 +28,7 @@ public class Selenium2_Alarme_fake2 {
             Thread.sleep(1000);
             System.out.println("E alarma 1 deschisa dupa inchidere ? - " + isAlertOpened(driver));
 
-//  se comenteaza linia de ALERTA = se inchide pagina la final de executie si se redeschide pt testul urmator
+//  se comenteaza linia de schimbare = se inchide pagina la final de executie si se redeschide pt testul urmator
 //           Alert prima_alerta = driver.switchTo().alert();
 
         } catch (InterruptedException e) {
@@ -69,7 +69,7 @@ public class Selenium2_Alarme_fake2 {
             }
         }
     }
-    // aici verificam daca alerta este deschisa sau nu!
+//  aici verificam daca alerta este deschisa sau nu!
     public static boolean isAlertOpened(ChromeDriver driver) {
         try {
             driver.switchTo().alert();
