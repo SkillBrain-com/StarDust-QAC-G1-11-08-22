@@ -22,7 +22,7 @@ public class Erori_java {
         System.out.println(fileInput.readLine());
         System.out.println(" ");
         fileInput.close();
-        System.out.println("Afisam raspunsul pentru unckededExceptions \n");
+        System.out.println("Afisam raspunsul pentru \"ckededExceptions\" \n");
     }
 //  unchecked exceptions
     public static void unchekedExceptions(){

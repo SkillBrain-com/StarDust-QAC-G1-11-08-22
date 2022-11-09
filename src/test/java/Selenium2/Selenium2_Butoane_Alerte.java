@@ -17,11 +17,11 @@ public class Selenium2_Butoane_Alerte {
         driver.manage().window().maximize();
         Thread.sleep(2500);
 
-        WebElement firstButton = driver.findElement(By.id("alertButtom"));
+        WebElement firstButton = driver.findElement(By.cssSelector("#alertButton"));
         WebElement thirdButton = driver.findElement(By.cssSelector("#confirmButton"));
         WebElement forthButton = driver.findElement(By.cssSelector("#promtButton"));
 
-//            firstButton.click();
+            firstButton.click();
 //            thirdButton.click();
 //            forthButton.click();
 

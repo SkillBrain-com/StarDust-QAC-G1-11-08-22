@@ -1,0 +1,2 @@
+Avem un cod de exceptii pentru diverse cazuri.
+Urmeaza sa le verificam

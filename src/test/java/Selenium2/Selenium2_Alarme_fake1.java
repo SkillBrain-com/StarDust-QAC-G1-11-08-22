@@ -28,7 +28,7 @@ public class Selenium2_Alarme_fake1 {
             Thread.sleep(1000);
             System.out.println("E alarma 1 deschisa dupa inchidere ? - " + isAlertOpened(driver));
 
-//  se comenteaza linia de ALERTA = se inchide pagina la final de executie si se redeschide pt testul 2
+//  se comenteaza linia de SWITCH = pagina se inchide la final de executie, se redeschide pt testul 2
 //           Alert prima_alerta = driver.switchTo().alert();
 
         } catch (InterruptedException e) {

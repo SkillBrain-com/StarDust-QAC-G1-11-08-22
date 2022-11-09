@@ -26,9 +26,9 @@ public class Selenium2_Alarme_fake2 {
             Thread.sleep(1000);
             button1_OK.click();
             Thread.sleep(1000);
-            System.out.println("E alarma 1 deschisa dupa inchidere ? - " + isAlertOpened(driver));
+            System.out.println("E alarma 1 deschisa dupa executie ? - " + isAlertOpened(driver));
 
-//  se comenteaza linia de schimbare = se inchide pagina la final de executie si se redeschide pt testul urmator
+//  se comenteaza linia de Switch = se inchide pagina la final de executie. Se redeschide pt testul urmator
 //           Alert prima_alerta = driver.switchTo().alert();
 
         } catch (InterruptedException e) {
@@ -56,7 +56,7 @@ public class Selenium2_Alarme_fake2 {
             Thread.sleep(1000);
             button2_OK.click();
             Thread.sleep(1000);
-            System.out.println("E alarma 2 deschisa dupa inchidere ? - " + isAlertOpened(driver));
+            System.out.println("E alarma 2 deschisa dupa executie ? - " + isAlertOpened(driver));
 
 //  se comenteaza linia pt ca nu este nevoie. Se inchide pagina la final.
 //          Alert a_doua_alerta = driver.switchTo().alert();

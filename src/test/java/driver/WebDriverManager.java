@@ -1,5 +1,4 @@
 package driver;
-
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WebDriverManager {
@@ -8,4 +7,6 @@ public class WebDriverManager {
         System.setProperty("webdriver.chrome.driver" , "drivers/chromedriver.exe");
         return new ChromeDriver();
     }
+
+
 }

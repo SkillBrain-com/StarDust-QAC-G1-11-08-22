@@ -13,7 +13,7 @@ public class Utilitati {
     public static ChromeDriver getChromeDriver(){
         System.setProperty("webdriver.chrome.driver" , "drivers/chromedriver.exe" );
 //  creez un obiect de tipul ChromeDriver
-        ChromeDriver driver = new ChromeDriver();
+//        ChromeDriver driver = new ChromeDriver();
         return new ChromeDriver();
     }
 
