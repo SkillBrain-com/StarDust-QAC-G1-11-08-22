@@ -8,5 +8,4 @@ public class WebDriverManager {
         return new ChromeDriver();
     }
 
-
 }
