@@ -1,4 +1,6 @@
-package TEST_NG_TEME;
+package TEST_NG;
+import Selenium2.Browser_Manager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -6,18 +8,16 @@ import org.testng.annotations.Test;
 import java.util.Set;
 
 @Test
-public class TEST_NG_primul_test {
+public class TESTNG_primul_test {
 
     public static void main(String[] args) throws InterruptedException {
         Selenium2_WindowHandles();
     }
 
     @Test
-    public void primulTest() {
+//  Pentru a rula un test punem comanda @TEST in fata liniilor de comanda pentru un fisier
+//  incercam o testare folosind liniile din fisierul Selenium2_Navigare_Tab_Focus
 
-    }
-
-//  folosim liniile din fisierul Selen2_Navig_Focus_Tab_C6
     public static void Selenium2_WindowHandles() throws InterruptedException {
 
              ChromeDriver driver = null;
@@ -27,14 +27,14 @@ public class TEST_NG_primul_test {
 
                 driver.get("https://demoqa.com/browser-windows");
                 driver.manage().window().maximize();
-                Thread.sleep(1500);
+                Thread.sleep(2500);
 
                 WebElement tabButton = driver.findElement(By.id("tabButton"));
                 tabButton.click();
 
                 String parentWindow = driver.getWindowHandle();
                 Set<String> windowHandles = driver.getWindowHandles();
-                Thread.sleep(1500);
+                Thread.sleep(2500);
 
                 for (String window : windowHandles) {
                     if (!window.equals(parentWindow)) {
@@ -67,5 +67,5 @@ public class TEST_NG_primul_test {
                     driver.quit();
                 }
             }
-    }
-}
+        }
+   }

@@ -1,21 +1,17 @@
-package TEST_NG_TEME;
+package TEST_NG;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
-
 import java.util.Set;
 
-public class TEST_MainSel_T1 extends BaseTest_Method1 {
 
 
-
+public class TEST_MainSel_T1 {
 
     public static void main(String[] args) throws InterruptedException {
 
-//  folosim liniile din fisierul Selen2_Navig_Focus_Tab_C6
-
+//  folosim liniile din fisierul Selenium2_Navigare_Tab_Focus
 
         ChromeDriver driver = null;
         try {
@@ -65,6 +61,11 @@ public class TEST_MainSel_T1 extends BaseTest_Method1 {
             }
         }
     }
+
+
+
+
+
 
 }
 
