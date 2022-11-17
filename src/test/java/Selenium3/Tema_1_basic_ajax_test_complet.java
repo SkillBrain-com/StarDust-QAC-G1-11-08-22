@@ -41,6 +41,8 @@ public class Tema_1_basic_ajax_test_complet {
         Thread.sleep(1000);
         WebElement Go_back_to_form1A = driver.findElement(By.id("back_to_form"));
         Go_back_to_form1A.click();
+        String TEXT1 = driver.findElement(By.cssSelector("#combo2 > option:nth-child(1)")).getText();
+        System.out.println("Valoare capturata casuta language_id = " + TEXT1);
         System.out.println("A fost selectata optiunea \"1 cu 1\"");
        Thread.sleep(2000);
 
@@ -84,6 +86,8 @@ public class Tema_1_basic_ajax_test_complet {
         Thread.sleep(1000);
         WebElement Go_back_to_form2A = driver.findElement(By.id("back_to_form"));
         Go_back_to_form2A.click();
+        String TEXT4 = driver.findElement(By.cssSelector("#combo2 > option:nth-child(1)")).getText();
+        System.out.println("Valoare capturata casuta language_id = " + TEXT4);
         System.out.println("A fost selectata optiunea \"2 cu 10\"");
         Thread.sleep(2000);
 
@@ -104,7 +108,6 @@ public class Tema_1_basic_ajax_test_complet {
         Element2C.click();
         WebElement Element2_2C = driver.findElement(By.cssSelector("#combo2 > option:nth-child(3)"));
         Element2_2C.click();
-
         WebElement Code_In_It_Button2C = driver.findElement(By.cssSelector(".styled-click-button"));
         Thread.sleep(1000);
         Code_In_It_Button2C.click();
@@ -127,7 +130,7 @@ public class Tema_1_basic_ajax_test_complet {
         System.out.println("A fost selectata optiunea \"2 cu 13\"");
         Thread.sleep(2000);
 
- // --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // a treia linie de la casuta 1 si prima linie de la casuta 2
 
         WebElement Element3A = driver.findElement(By.cssSelector("#combo1 > option:nth-child(3)"));
@@ -140,6 +143,8 @@ public class Tema_1_basic_ajax_test_complet {
         Thread.sleep(1000);
         WebElement Go_back_to_form3A = driver.findElement(By.id("back_to_form"));
         Go_back_to_form3A.click();
+        String TEXT8 = driver.findElement(By.cssSelector("#combo2 > option:nth-child(1)")).getText();
+        System.out.println("Valoare capturata casuta language_id = " + TEXT8);
         System.out.println("A fost selectata optiunea \"3 cu 20\"");
         Thread.sleep(2000);
 
