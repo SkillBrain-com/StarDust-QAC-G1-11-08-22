@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static java.lang.Thread.sleep;
 
 
-    public class Selenium1_T3 {
+    public class Selen1_T3_Locator_C5 {
 
 //  PAGINA 3 din https://testpages.herokuapp.com/styled/ = Find By Playground - Locator Examples
 

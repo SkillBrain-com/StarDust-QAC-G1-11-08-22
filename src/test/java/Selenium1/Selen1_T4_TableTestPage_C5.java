@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 
-public class Selenium1_T4 {
+public class Selen1_T4_TableTestPage_C5 {
 
 //  PAGINA 4 din https://testpages.herokuapp.com/styled/ = HTML TABLE Tag
 

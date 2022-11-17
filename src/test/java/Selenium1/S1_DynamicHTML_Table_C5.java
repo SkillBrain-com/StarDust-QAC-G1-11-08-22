@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 
-public class Tabel_HTML {
+public class S1_DynamicHTML_Table_C5 {
 
     public static void main(String[] args) throws InterruptedException {
         ChromeDriver driver = createDriverAndGetPage();
@@ -35,12 +35,13 @@ public class Tabel_HTML {
 
     }
     public static void getTableDetails(ChromeDriver driver) throws InterruptedException {
-        Thread.sleep(2000);
         WebElement tableCaption = driver.findElement(By.cssSelector("#tablehere table caption"));
         System.out.println(tableCaption.getText());
+        Thread.sleep(1000);
 
 //  selectam tabelul dupa randuri si coloane
         List<WebElement> tableRows = driver.findElements(By.cssSelector("tr"));
+        Thread.sleep(2000);
         for (int i = 0; i < tableRows.size(); i++) {
             WebElement currentRow = tableRows.get(i);
             if (i == 0) {

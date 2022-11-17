@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-public class Selenium2_formulare_pt_testare {
+public class Selen2_form_test_SCREENSHOOT_C6 {
 
     public static void main(String[] args) {
         Formular_detaliat_testare();

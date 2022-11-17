@@ -1,6 +1,6 @@
 package TEST_NG;
 
-import Selenium2.Utilitati_Selen2;
+import Selenium2.Utilitati;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -13,7 +13,7 @@ public class AlertaButonTestare {
 
     @BeforeSuite(alwaysRun = true)
     public void initializeDriver() {
-        driver = Utilitati_Selen2.getChromeDriver();
+        driver = Utilitati.getChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         System.out.println("WebDriver initialized");
     }

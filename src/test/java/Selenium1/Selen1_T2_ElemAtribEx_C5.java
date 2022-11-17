@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Selenium1_T2 {
+public class Selen1_T2_ElemAtribEx_C5 {
 
 //  PAGINA 2 din https://testpages.herokuapp.com/styled/ = Element Attributes Examples
 

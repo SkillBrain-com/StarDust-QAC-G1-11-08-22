@@ -15,6 +15,7 @@ import static org.testng.Assert.assertTrue;
 public class ChromeOption_Test {
 
     ChromeDriver driver;
+//    Tester_page_EMAG emagPage = PageFactory.initElements(driver,Tester_page_EMAG.class);
 
     @AfterMethod(alwaysRun = true)
     public void afterMethod(){
@@ -39,7 +40,7 @@ public class ChromeOption_Test {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));   //  implicite wait - timp de asteptare, comanda implicita
 
 //  declaram o instanta de OBIECT ( si apelam metode de PAGE_FACTORI ) ca sa instantiem clasa respectiva - din Tester_page_EMAG
-        Tester_page_EMAG emagPage = PageFactory.initElements(driver, Tester_page_EMAG.class);
+        Tester_page_EMAG emagPage = PageFactory.initElements(driver,Tester_page_EMAG.class);
 
 
         driver.get("https://www.emag.ro/");
@@ -87,7 +88,7 @@ public class ChromeOption_Test {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button.close")));
 
 //  anulam acel pop-up care apare pe pagina si ne intersecteaza click-ul
-         WebElement close_Button = driver.findElement(By.cssSelector("button.close"));
+        WebElement close_Button = driver.findElement(By.cssSelector("button.close"));
         close_Button.click();
 
 //  ii punem un timp de asteptare sa incarce toate elementele de pe pagina

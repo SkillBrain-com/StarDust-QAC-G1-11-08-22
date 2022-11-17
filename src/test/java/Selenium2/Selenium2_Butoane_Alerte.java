@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import java.time.Duration;
+
 public class Selenium2_Butoane_Alerte {
 
     public static void main(String[] args) throws InterruptedException {
@@ -15,15 +17,20 @@ public class Selenium2_Butoane_Alerte {
 
         driver.get("https://demoqa.com/alerts");
         driver.manage().window().maximize();
-        Thread.sleep(2500);
+        Thread.sleep(1000);
 
         WebElement firstButton = driver.findElement(By.cssSelector("#alertButton"));
+//        WebElement secondButton = driver.findElement(By.cssSelector("#timerAlertButton"));
         WebElement thirdButton = driver.findElement(By.cssSelector("#confirmButton"));
         WebElement forthButton = driver.findElement(By.cssSelector("#promtButton"));
 
             firstButton.click();
-//            thirdButton.click();
-//            forthButton.click();
+//        driver.findElements(By.cssSelector(".btn.btn-primary")).get(2);
+//          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+//          secondButton.click();
+            thirdButton.click();
+            forthButton.click();
+
 
         Alert alert = driver.switchTo().alert();
         alert.sendKeys("Text2");
@@ -31,7 +38,7 @@ public class Selenium2_Butoane_Alerte {
         forthButton.click();
         alert.dismiss();
 
-//        driver.close();
+
         driver.quit();
     }
 
@@ -66,10 +73,16 @@ public class Selenium2_Butoane_Alerte {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
         driver.get("https://demoqa.com/alerts");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
         driver.findElements(By.cssSelector(".btn.btn-primary")).get(2).click();
 
-        System.out.println("Am facut click pe butonul nostru1");
+        System.out.println("Am facut click pe buton");
         driver.close();
         driver.quit();
     }
+
 }
+
+
+
+

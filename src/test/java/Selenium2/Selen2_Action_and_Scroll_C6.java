@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
-public class Selenium2_Action_and_Scroll {
+public class Selen2_Action_and_Scroll_C6 {
 
     public static void main(String[] args) throws InterruptedException {
 

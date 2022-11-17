@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Iterator;
 import java.util.Set;
 
-public class Selenium2_Navigare_Browser_Focus {
+public class Selen2_Navig_Browser_Focus_C6 {
 
     public static void main(String[] args)  {
 

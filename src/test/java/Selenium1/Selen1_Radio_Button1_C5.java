@@ -1,4 +1,4 @@
-package Selenium2;
+package Selenium1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class Selenium2_Radio_Button {
+public class Selen1_Radio_Button1_C5 {
 
     public static void main(String[] args)  {
 

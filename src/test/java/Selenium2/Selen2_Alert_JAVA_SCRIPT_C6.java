@@ -6,7 +6,7 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Selenium2_Alert_JAVA_SCRIPT {
+public class Selen2_Alert_JAVA_SCRIPT_C6 {
 //  suntem in pagina "https://testpages.herokuapp.com/styled/alerts/alert-test.html"
 
     public static void main(String[] args) throws InterruptedException {

@@ -7,8 +7,6 @@ import java.util.Map;
 
 public class WebdriverManager {
 
-//        public static ChromeDriver createChromeDriver() {
-//        }
 
     public static ChromeDriver getChromeDriverByExecutable(){
             System.setProperty("webdriver.chrome.driver" , "drivers/chromedriver.exe");
@@ -22,10 +20,17 @@ public class WebdriverManager {
     public static ChromeDriver getChromeDriverWithOptions() {
         ChromeOptions chromeOptions = new ChromeOptions();
 
-//        Map<String, String> map = new HashMap<>();
-//        map.put("deviceName","iPhone X");
+        Map<String, String> map = new HashMap<>();
+        map.put("deviceName","iPhone X");
 //        chromeOptions.setExperimentalOption("mobileEmulation", map);
+        chromeOptions.addArguments("start-maximized");
+        chromeOptions.setAcceptInsecureCerts(true);
 
+// pentru schimbarea profilului in chrome Driver putem sa schimbam cu linia de mai jos
+//        chromeOptions.addArguments("user-data-dir = xx");
+//        chromeOptions.addArguments("profile-directory = Profile 1");
+
+// aducem varianta corecta de drive si intializam/returnam o varianta de Chrome
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver(chromeOptions);
     }

@@ -3,6 +3,7 @@ package Object_packages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,11 +15,13 @@ import java.time.Duration;
 
 public class Emag_Test_Page_C8 {
 
-   ChromeDriver driver;
+    RemoteWebDriver driver;
+//   ChromeDriver driver;
 
    @BeforeSuite
    public void getChromeDriver(){
 //     driver = Utilitati_C8.getChromeDriver();
+//      driver = Utilitati_C8.getRemoteWebDriver();
       driver = Utilitati_C8.getChromeImplicitWait(3);
 //      driver = Utilitati_C8.getChromeWithWait(4);
    }

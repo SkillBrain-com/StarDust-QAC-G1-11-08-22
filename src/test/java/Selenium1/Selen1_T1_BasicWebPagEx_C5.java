@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 //  PAGINA 1 din tema https://testpages.herokuapp.com/styled/ = Basic Web Page Example
 
-public class Selenium1_T1 {
+public class Selen1_T1_BasicWebPagEx_C5 {
 
         public static void main(String[] args) throws InterruptedException {
             System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");

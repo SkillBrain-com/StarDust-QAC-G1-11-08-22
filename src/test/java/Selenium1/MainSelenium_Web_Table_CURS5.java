@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class MainSelenium_Web_Table {
+public class MainSelenium_Web_Table_CURS5 {
 
 
     public static <CodecSet> void main(String[] args) throws InterruptedException {

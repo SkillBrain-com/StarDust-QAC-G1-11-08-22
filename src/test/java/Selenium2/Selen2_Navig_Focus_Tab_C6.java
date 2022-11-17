@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Set;
 
-public class Selenium2_Navigare_Tab_Focus {
+public class Selen2_Navig_Focus_Tab_C6 {
 
 //  Schimbarea FOCUS-ului de pe un tab pe altul
 

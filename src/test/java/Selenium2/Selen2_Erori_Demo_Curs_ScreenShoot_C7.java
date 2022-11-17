@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Selenium2_Erori_Demo_Curs {
+public class Selen2_Erori_Demo_Curs_ScreenShoot_C7 {
 
     public static void main(String[] args) {
 
