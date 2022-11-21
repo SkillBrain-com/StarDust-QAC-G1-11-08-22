@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="SuiteTestGrid" verbose="1" >
+    <test name="SeleniumHomeWork5Grid" >
+        <classes>
+            <class name="SeleniumHomeWork5Grid.SeleniumHomeWork1Grid.browserWindow" />
+            <class name="SeleniumHomeWork5Grid.SeleniumHomeWork1Grid.temaSelenium1Acasa" />
+            <class name="SeleniumHomeWork5Grid.SeleniumHomeWork2Grid.AlertTestsHomeWork" />
+            <class name="SeleniumHomeWork5Grid.SeleniumHomeWork2Grid.FakeAlerts" />
+            <class name="SeleniumHomeWork5Grid.SeleniumHomeWork3TestNGGrid.LogIn" />
+            <class name="SeleniumHomeWork5Grid.SeleniumHomeWork4Grid.Ajax.basicAjaxTests" />
+            <class name="SeleniumHomeWork5Grid.SeleniumHomeWork4Grid.DinamicButtonsDisabled.dinamicButtonsTests" />
+<!--            <class name="SeleniumHomeWork5Grid.SeleniumHomeWork4Grid.DinamicButtonsSimple.dinamicButtonsSimple" />-->
+            <class name="SeleniumHomeWork5Grid.SeleniumHomeWork4Grid.JavaScript.javaScriptTests" />
+            <class name="SeleniumHomeWork5Grid.SeleniumHomeWork4Grid.Refresh.refreshTest" />
+
+       </classes>
+    </test>
+
+    
+</suite>
