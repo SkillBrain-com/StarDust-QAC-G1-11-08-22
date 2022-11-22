@@ -1,0 +1,75 @@
+package Selenium_Grid;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+import java.net.MalformedURLException;
+import java.time.Duration;
+
+public class EmagTestPage_Grid {
+
+    RemoteWebDriver driver;
+
+   @BeforeSuite
+   public void getChromeDriver() throws MalformedURLException {
+      driver = WebdriverManager.getRemoteWebDriver();
+   }
+
+   @AfterSuite
+   public void closeChrome(){
+        driver.quit();
+   }
+
+    @Test
+    public void implicitTest() throws InterruptedException {
+        driver.get("https://www.emag.ro/");
+        Pagina_Emag_Grid pagina_emag = PageFactory.initElements(driver, Pagina_Emag_Grid.class);
+        Thread.sleep(2000);
+        WebElement casutaNeagra = pagina_emag.getMesajPagina();
+        casutaNeagra.click();
+        Thread.sleep(2000);
+//  dau click pe banner-ul din josul paginii ca sa eliminam restuld e pop-up-uri care apar pe pagina ( sunt "by default" )
+//        driver.findElement(By.xpath ("//div[@class='gdpr-cookie-banner js-gdpr-cookie-banner pad-sep-xs pad-hrz-none show']")).click();
+//  eliminam linia de mai sus dar am definit totul in linia de Pagina_Emag
+
+// comentam aceasta linie pt ca am scris in "Pagina_Emag" linia de XPATH pt buton
+//        WebElement accept = driver.findElement(By.xpath("//button[normalize-space()='Accept']"));
+//        Thread.sleep(2500);               // anulam linia si facem functia de asteptare implicita - vezi mai sus
+//      variantele urmatoare:  "getChromeWithWait" si "getChromeImplicitWait"
+        WebElement accept = pagina_emag.getAcceptButton();
+        accept.click();
+        Thread.sleep(2000);
+    }
+
+   /*  ------------------------------------------------------------------------------------------------------------------
+avem alta metoda unde ii punem un timp de asteptare explicit
+    */
+
+    @Test
+    public void explicitTest() throws InterruptedException {
+        driver.get("https://www.emag.ro/");
+        driver.manage().window().maximize();
+        Pagina_Emag_Grid pagina_emag = PageFactory.initElements(driver, Pagina_Emag_Grid.class);
+        WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(3)) ;
+        WebElement casutaNeagra = pagina_emag.getMesajPagina();
+        explicitWait.until (ExpectedConditions.visibilityOf(casutaNeagra));
+
+//        explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='gdpr-cookie-banner js-gdpr-cookie-banner pad-sep-xs pad-hrz-none show']")));
+//        driver.findElement(By.xpath ("//div[@class='gdpr-cookie-banner js-gdpr-cookie-banner pad-sep-xs pad-hrz-none show']")).click();
+
+        casutaNeagra.click();
+
+//        WebElement accept = driver.findElement(By.xpath("//button[normalize-space()='Accept']"));
+        WebElement accept = pagina_emag.getAcceptButton();
+        accept.click();
+        Thread.sleep(2000);
+    }
+
+
+}
