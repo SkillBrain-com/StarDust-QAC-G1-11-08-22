@@ -1,5 +1,7 @@
 package Selenium3;
 
+// pagina "https://testpages.herokuapp.com/styled/index.html", JAVASCRIPT , exe.= Ajax JavaScript Examples
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;

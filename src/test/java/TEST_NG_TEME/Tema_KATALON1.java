@@ -65,7 +65,6 @@ public class Tema_KATALON1 extends BaseTest_Suite {
 // se executa a doua varianta
     public static void Logare_incorecta() throws InterruptedException {
 
-
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
         driver.manage().window().maximize();

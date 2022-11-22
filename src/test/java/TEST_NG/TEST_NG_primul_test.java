@@ -1,6 +1,4 @@
 package TEST_NG;
-import Selenium2.Browser_Manager;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,7 +6,7 @@ import org.testng.annotations.Test;
 import java.util.Set;
 
 @Test
-public class TESTNG_primul_test {
+public class TEST_NG_primul_test {
 
     public static void main(String[] args) throws InterruptedException {
         Selenium2_WindowHandles();

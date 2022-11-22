@@ -5,11 +5,16 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class Utilitati {
+
     public static ChromeDriver getChromeDriver(){
         System.setProperty("webdriver.chrome.driver" , "drivers/chromedriver.exe" );
 //  creez un obiect de tipul ChromeDriver
@@ -29,6 +34,7 @@ public class Utilitati {
             System.out.println("Screenshot taken");
         }
     }
+
 
 
 }

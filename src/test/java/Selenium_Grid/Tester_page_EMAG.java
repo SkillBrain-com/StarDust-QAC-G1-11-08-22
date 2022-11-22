@@ -1,4 +1,4 @@
-package Object_packages;
+package Selenium_Grid;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,7 +16,6 @@ public class Tester_page_EMAG {
 
     @FindBy(css="a.login-btn")
     private WebElement loginButton;
-
 
     @FindBy (css="button.close")
     private WebElement closeButton;

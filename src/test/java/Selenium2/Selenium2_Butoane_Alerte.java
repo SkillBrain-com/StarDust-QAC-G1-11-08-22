@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.w3c.dom.html.HTMLInputElement;
 
 import java.time.Duration;
 
@@ -20,14 +21,15 @@ public class Selenium2_Butoane_Alerte {
         Thread.sleep(1000);
 
         WebElement firstButton = driver.findElement(By.cssSelector("#alertButton"));
-//        WebElement secondButton = driver.findElement(By.cssSelector("#timerAlertButton"));
+        WebElement secondButton = driver.findElement(By.xpath("//*[@id=\"timerAlertButton\"]"));
         WebElement thirdButton = driver.findElement(By.cssSelector("#confirmButton"));
         WebElement forthButton = driver.findElement(By.cssSelector("#promtButton"));
 
             firstButton.click();
-//        driver.findElements(By.cssSelector(".btn.btn-primary")).get(2);
-//          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
-//          secondButton.click();
+            secondButton.click();
+            Thread.sleep(6000);
+//            driver.findElements(By.cssSelector("#button")).get(2).click();
+            driver.findElements(By.cssSelector("#button")).get(7).click();
             thirdButton.click();
             forthButton.click();
 

@@ -20,9 +20,10 @@ public class Wait_Test_Selenium {
     }
 
     @Test
-    public void mobileChromeTest() {
+    public void mobileChromeTest() throws InterruptedException {
         driver.get("http://demoqa.com/");
-//        driver.findElement(By.id("27")).click();      // scrie linia asta ca sa pice testul
+        driver.manage().window().maximize();
+        Thread.sleep(3000);
     }
 
 }

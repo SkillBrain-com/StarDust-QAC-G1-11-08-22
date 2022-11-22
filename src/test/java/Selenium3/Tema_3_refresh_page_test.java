@@ -1,5 +1,7 @@
 package Selenium3;
 
+// pagina "https://testpages.herokuapp.com/styled/index.html", JAVASCRIPT , exe.= Refresh Test Page
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;

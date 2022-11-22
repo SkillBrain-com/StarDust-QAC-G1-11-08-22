@@ -20,11 +20,9 @@ public class Utilitati {
 
     public static RemoteWebDriver getRemoteDriver()throws MalformedURLException {
 //        URL url = new URL ("http://localhost:4444/ui");
-//        ChromeOptions chromeOptions =
+//        ChromeOptions chromeOptions = new ChromeOptions();
         return new RemoteWebDriver(new URL("http://localhost:4444/ui"),new ChromeOptions());
-
     }
-
 
     public static ChromeDriver getChromeDriver(){
         System.setProperty("webdriver.chrome.driver" , "drivers/chromedriver.exe" );

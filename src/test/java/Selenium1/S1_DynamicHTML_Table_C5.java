@@ -91,7 +91,7 @@ public class S1_DynamicHTML_Table_C5 {
         WebElement jsonData= driver.findElement(By.cssSelector("textarea#jsondata"));
         jsonData.clear();
         jsonData.sendKeys("[{\"name\": \"Bob\", \"age\": 20}, {\"name\": \"Georgiana\", \"age\": 42}, {\"name\": \"Ionica\", \"age\": 32}, {\"name\": \"Ileana\", \"age\": 28}, \n" +
-                " {\"name\": \"Vasile\", \"age\": 43}, {\"name\": \"Gergica\", \"age\": 40}]");
+                " {\"name\": \"Vasile\", \"age\": 43}, {\"name\": \"Georgica\", \"age\": 40}]");
         System.out.println(jsonData.getAttribute("value"));
 
 // se apasa butonul de refresh

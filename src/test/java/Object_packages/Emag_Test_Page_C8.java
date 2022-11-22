@@ -1,9 +1,7 @@
 package Object_packages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,13 +13,11 @@ import java.time.Duration;
 
 public class Emag_Test_Page_C8 {
 
-    RemoteWebDriver driver;
-//   ChromeDriver driver;
+   ChromeDriver driver;
 
    @BeforeSuite
    public void getChromeDriver(){
 //     driver = Utilitati_C8.getChromeDriver();
-//      driver = Utilitati_C8.getRemoteWebDriver();
       driver = Utilitati_C8.getChromeImplicitWait(3);
 //      driver = Utilitati_C8.getChromeWithWait(4);
    }
@@ -33,12 +29,13 @@ public class Emag_Test_Page_C8 {
 
 
     @Test
-    public void implicitTest(){
+    public void implicitTest() throws InterruptedException {
         driver.get("https://www.emag.ro/");
         Pagina_Emag pagina_emag = PageFactory.initElements(driver, Pagina_Emag.class);
         WebElement casutaNeagra = pagina_emag.getMesajPagina();
         casutaNeagra.click();
-//  dau click pe banner-ul din josul paginii ca sa eliminam restuld e pop-up-uri care apar pe pagina ( sunt "by default" )
+        Thread.sleep(3000);
+//  dau click pe banner-ul din josul paginii ca sa eliminam restul de pop-up-uri care apar pe pagina ( sunt "by default" )
 //        driver.findElement(By.xpath ("//div[@class='gdpr-cookie-banner js-gdpr-cookie-banner pad-sep-xs pad-hrz-none show']")).click();
 //  eliminam linia de mai sus dar am definit totul in linia de Pagina_Emag
 
@@ -55,7 +52,7 @@ avem alta metoda unde ii punem un timp de asteptare explicit
     */
 
     @Test
-    public void explicitTest(){
+    public void explicitTest() throws InterruptedException {
         driver.get("https://www.emag.ro/");
         driver.manage().window().maximize();
         Pagina_Emag pagina_emag = PageFactory.initElements(driver, Pagina_Emag.class);
@@ -65,13 +62,20 @@ avem alta metoda unde ii punem un timp de asteptare explicit
 
 //        explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='gdpr-cookie-banner js-gdpr-cookie-banner pad-sep-xs pad-hrz-none show']")));
 //        driver.findElement(By.xpath ("//div[@class='gdpr-cookie-banner js-gdpr-cookie-banner pad-sep-xs pad-hrz-none show']")).click();
-
+        Thread.sleep(3000);
         casutaNeagra.click();
 
 //        WebElement accept = driver.findElement(By.xpath("//button[normalize-space()='Accept']"));
         WebElement accept = pagina_emag.getAcceptButton();
         accept.click();
     }
+
+
+
+
+
+
+
 
 
 }
