@@ -15,7 +15,7 @@ public class Browser_Manager {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 //  cream un OBIECT de tip ChromeDriver
         ChromeDriver driver = new ChromeDriver();
-
+        Thread.sleep(2000);
         driver.quit();
     }
 

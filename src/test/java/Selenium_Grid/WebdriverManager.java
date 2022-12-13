@@ -14,7 +14,7 @@ import java.util.Map;
 public class WebdriverManager {
 
     public static RemoteWebDriver getRemoteWebDriver() throws MalformedURLException {
-        return new RemoteWebDriver(new URL("http://localhost:4444/"),new ChromeOptions());
+        return new RemoteWebDriver(new URL("http://localhost:4444"),new ChromeOptions());
     }
 
     public static ChromeDriver getChromeDriverByExecutable(){

@@ -20,14 +20,14 @@ public class TEST_MainSel_T1 {
 
             driver.get("https://demoqa.com/browser-windows");
             driver.manage().window().maximize();
-            Thread.sleep(1500);
+            Thread.sleep(2500);
 
             WebElement tabButton = driver.findElement(By.id("tabButton"));
             tabButton.click();
 
             String parentWindow = driver.getWindowHandle();
             Set<String> windowHandles = driver.getWindowHandles();
-            Thread.sleep(1500);
+            Thread.sleep(2500);
 
             for (String window: windowHandles){
                 if ( !window.equals(parentWindow)){

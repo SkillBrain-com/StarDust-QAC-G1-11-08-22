@@ -18,7 +18,7 @@ public class Login_page_C8 {
     private WebElement email;
 
     @FindBy(id = "Password")
-    private WebElement pasword;
+    private WebElement password;
 
 // pt ca elementele sunt pribvate le accesam cu metaoda de PUBLIC si asa respectam metoda/principiul de INCAPSULARE
 
@@ -30,7 +30,7 @@ public class Login_page_C8 {
         return email;
     }
 
-    public WebElement getPasword() {
-        return pasword;
+    public WebElement getPassword() {
+        return password;
     }
 }

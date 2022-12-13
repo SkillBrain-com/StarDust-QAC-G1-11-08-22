@@ -1,41 +1,40 @@
-package Selenium_Grid;
+package INTERSHIP;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class Tester_page_EMAG {
+public class Page_CYSIAM {
 
-    public Tester_page_EMAG(ChromeDriver driver){
-        PageFactory.initElements(driver, this );
-    }
-
-    @FindBy(css = "button.js-accept")
+    @FindBy(xpath = "//button[normalize-space()='Accept']")
     private WebElement acceptButton;
 
-    @FindBy(css="a.login-btn")
-    private WebElement loginButton;
-
-    @FindBy (css="button.close")
+    @FindBy(xpath = "//img[@title='IFI']")
     private WebElement closeButton;
+
+    @FindBy(xpath = "//a[normalize-space()='Intra in cont']")
+    private WebElement loginButton;
 
     @FindBy(xpath = "//a[normalize-space()='Inapoi in site']")
     private WebElement inapoiInSite;
 
+// facem o metoda de "getter" - ALT + INSERT si selectam GETTER
+
+
     public WebElement getAcceptButton() {
         return acceptButton;
-    }
-
-    public WebElement getLoginButton() {
-        return loginButton;
     }
 
     public WebElement getCloseButton() {
         return closeButton;
     }
 
+    public WebElement getLoginButton() {
+        return loginButton;
+    }
+
     public WebElement getInapoiInSite() {
         return inapoiInSite;
     }
+
+
 }

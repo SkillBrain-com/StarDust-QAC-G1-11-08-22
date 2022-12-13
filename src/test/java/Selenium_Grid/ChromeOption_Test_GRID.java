@@ -1,5 +1,6 @@
 package Selenium_Grid;
 
+import Object_packages.Pagina_Emag;
 import Object_packages.Tester_page_EMAG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -22,32 +23,29 @@ public class ChromeOption_Test_GRID {
 
     RemoteWebDriver driver;
 
-//    @BeforeSuite
-//    public void getChromeDriver()throws MalformedURLException {
-////        driver = Utilitati_GRID.getRemoteWebDriver();
-////        driver = WebdriverManager.getRemoteWebDriver();
-//    }
-//
-//    @AfterSuite
-//    public void closeChrome(){
-//       driver.quit();
-//    }
+    Tester_page_EMAG emagPage;
+
+    @BeforeSuite
+    public void getChromeDriver()throws MalformedURLException {
+        driver = WebdriverManager.getRemoteWebDriver();
+    }
+
+    @AfterSuite
+    public void closeChrome(){
+       driver.quit();
+    }
 
     @Test
     public void Chrome_Test() throws MalformedURLException, InterruptedException {
-        RemoteWebDriver driver = WebdriverManager.getRemoteWebDriver();
+//        driver = WebdriverManager.getRemoteWebDriver();
         driver.get("https://demoqa.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-
         Thread.sleep(2000);
-        driver.quit();
     }
-
 
     @Test
     public void waitTest_Implicit() throws InterruptedException, MalformedURLException {
-        RemoteWebDriver driver = WebdriverManager.getRemoteWebDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
         driver.get("https://www.emag.ro/");
         driver.manage().window().maximize();
@@ -58,7 +56,10 @@ public class ChromeOption_Test_GRID {
 //        inapoiInSite.click();
 
         Thread.sleep(1000);
-        Tester_page_EMAG emagPage = PageFactory.initElements(driver,Tester_page_EMAG.class);
+        if (emagPage == null){
+            emagPage = PageFactory.initElements(driver,Tester_page_EMAG.class);
+        }
+
         Thread.sleep(2000);
 
 //  folosim functia getAcceptButton ca sa activam comanda
@@ -70,15 +71,12 @@ public class ChromeOption_Test_GRID {
         WebElement loginButton = emagPage.getLoginButton();
         Thread.sleep(1000);
         loginButton.click();
-
         Thread.sleep(3000);
-        driver.quit();
-    }
-
+     }
 
     @Test   // expliciturile se aplica doar cand avem nevoie de un anumit WAIT pe pagina pe care navigam
     public void waitTest_Explicit() throws InterruptedException, MalformedURLException {
-        RemoteWebDriver driver = WebdriverManager.getRemoteWebDriver();
+//        driver = WebdriverManager.getRemoteWebDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));   //  implicite wait - timp de asteptare, comanda implicita
         driver.get("https://www.emag.ro/");
         driver.manage().window().maximize();
@@ -97,6 +95,11 @@ public class ChromeOption_Test_GRID {
         WebElement closeButton = driver.findElement(By.cssSelector("button.close"));
         closeButton.click();
 
+        Pagina_Emag pagina_emag = PageFactory.initElements(driver, Pagina_Emag.class);
+        WebElement casutaNeagra = pagina_emag.getMesajPagina();
+        casutaNeagra.click();
+        Thread.sleep(3000);
+
 //  ii punem un timp de asteptare sa incarce toate elementele de pe pagina
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button.js-accept")));
         WebElement acceptButton = driver.findElement(By.cssSelector("button.js-accept"));
@@ -112,7 +115,5 @@ public class ChromeOption_Test_GRID {
 
 //  facem un assert pentru login-ul de pe pagina ce apare
         assertTrue(driver.getCurrentUrl().contains("user/login"));
-
-        driver.quit();
     }
 }
